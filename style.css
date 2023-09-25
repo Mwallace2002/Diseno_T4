@@ -147,7 +147,8 @@ body, .grid {
 }
 
 .box iframe {
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 
 .box-formulario {
