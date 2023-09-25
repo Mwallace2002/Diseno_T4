@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarea 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="calculos.html">Calculos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Calculos matematicos</h1>
+    </header>
+
+    <div class="box-calculos">
+        <div class="subcaja">   
+            <h3><center>Suma o resta de edades</center></h3>
+            <p>Ingrese dos edades en años:</p><br>
+            <input type="number" id="edad1" placeholder="Edad 1">
+            <input type="number" id="edad2" placeholder="Edad 2">
+            <br></br>
+            <button onclick="suma()">Sumar</button> 
+            <p>La suma de ambas edades es: <span id="resultado-suma"></span></p>
+            <br>
+            <button onclick="resta()">Restar</button>  
+            <p>La resta de ambas edades es: <span id="resultado-resta"></span></p>
+            
+        </div>
+
+        <div class="subcaja">
+            <h3><center>Conversion CLP a Dolar</center></h3>
+            <p>Ingrese la cantidad de dinero en CLP o en Dolares:</p><br>
+            <input type="number" id="plata" placeholder="Por ejemplo: 100000 (CLP) o 100 (Dolar)">
+            <br></br>
+            <button onclick="conversion_a_DOL()">Convertir a Dolar</button>
+            <br>
+            <p>La conversion a Dolares es: <span id="conv-dolar"></span></p>
+            <br>
+            <button onclick="conversion_a_CLP()">Convertir a CLP</button>   
+            <br>     
+            <p>La conversion a Pesos Chilenos es: <span id="conv-clp"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function suma() {
+            var edad1 = parseFloat(document.getElementById("edad1").value);
+            var edad2 = parseFloat(document.getElementById("edad2").value);
+            var suma = edad1 + edad2;
+            document.getElementById("resultado-suma").textContent = suma;
+        }
+
+        function resta() {
+            var edad1 = parseFloat(document.getElementById("edad1").value);
+            var edad2 = parseFloat(document.getElementById("edad2").value);
+            var resta = Math.abs(edad1 - edad2);
+            document.getElementById("resultado-resta").textContent = resta;
+        }
+
+        function conversion_a_DOL() {
+            var plata = parseFloat(document.getElementById("plata").value);
+            var conversion1 = plata*0.0011
+            var texto1 = "$" + conversion1 + " US dolars"
+            document.getElementById("conv-dolar").textContent = texto1;
+        }
+        
+        function conversion_a_CLP() {
+            var plata = parseFloat(document.getElementById("plata").value);
+            var conversion2 = plata*882.10
+            var texto2 = "$" + conversion2 + " Pesos chilenos"
+            document.getElementById("conv-clp").textContent = texto2;
+        }
+
+    </script>
+</body>
+</html>

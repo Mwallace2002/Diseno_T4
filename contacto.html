@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarea 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="calculos.html">Calculos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Formulario de contacto</h1>
+    </header>
+    <div class="box-formulario">
+        <center>
+            <form id="formulario">
+                <label for="nombre">Nombre:</label><br><br>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required><br><br>
+                <label for="apellido">Apellido:</label><br><br>
+                <input type="text" id="apellido" placeholder="Escribe tu apellido" required><br><br>
+                <label for="mail">Mail:</label><br><br>
+                <input type="email" id="mail" placeholder="Tu correo electrónico"><br><br>
+                <label for="asunto">Asunto:</label><br><br>
+                <input type="text" id="asunto" placeholder="Escribe el asunto"><br><br>
+                <label for="mensaje">Mensaje:</label><br><br>
+                <textarea id="mensaje" placeholder="Escribe tu mensaje aquí"></textarea><br><br>
+                <button type="submit" onclick="mostrarFrase()">Contactar</button><br><br>
+                <p id="fraseMostrada"></p><br>
+                
+            </form>
+        </center>
+    </div>
+    <script src="script-formulario.js"></script>
+
+
+</body>
+</html>
+
